@@ -108,7 +108,7 @@
   height: 100% !important;
   max-width: 100% !important;
   z-index: 99999 !important;
-          box-shadow: 0 !important;
+  box-shadow: none !important;
   background-image: none !important;
   background-color: #333; }
   .flowplayer.is-fullscreen .fp-player {
@@ -489,7 +489,7 @@
     right: 0;
     height: 100%;
     width: 100%; }
-  .flowplayer video.fp-engine:not(.native-subtitles)::media-controls {
+  .flowplayer video.fp-engine:not(.native-subtitles) {
     display: none !important; }
   .flowplayer .fp-player {
     position: absolute;
@@ -521,14 +521,12 @@
       filter: none;
       opacity: 0; }
   .flowplayer.fp-ui-shown .fp-ui, .flowplayer.is-paused .fp-ui, .flowplayer.is-mouseover .fp-ui, .flowplayer.is-loading .fp-ui {
-    background-image: gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.25)), color-stop(15%, transparent));
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.25), transparent 15%); }
     .flowplayer.fp-ui-shown .fp-ui > *, .flowplayer.is-paused .fp-ui > *, .flowplayer.is-mouseover .fp-ui > *, .flowplayer.is-loading .fp-ui > * {
       filter: none;
       opacity: 1; }
   .flowplayer .fp-header {
     top: 0;
-    background-image: gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.25)), to(transparent));
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), transparent);
     text-align: left;
     height: 3.6em;
@@ -638,7 +636,6 @@
     display: none; }
   .flowplayer .fp-controls {
     display: flex;
-	pack: justify;
     justify-content: space-around;
     align-items: center;
     height: 2.4em;
